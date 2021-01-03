@@ -1,6 +1,6 @@
 name: sexy_api_client
 description: A simple wrapper around Google's http module for easily making Query String API calls.
-version: 0.0.1
+version: 0.0.1+2
 author:
 homepage:
 

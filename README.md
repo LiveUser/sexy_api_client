@@ -7,13 +7,9 @@ Note: This library makes an http Get request to the specified URL, concatenates 
 # Import Packages
 
 ~~~dart
-import 'package:http/http.dart';
 import 'package:sexy_api_client/sexy_api_client.dart';
 ~~~
-
-
-
-## # Example
+# Example
 
 ~~~dart
 //Define parameters
@@ -21,8 +17,8 @@ Map<String,String> parameters = {
 	'format':'json',
 };
 //Make the API call to the specified URL using the Map parameters
-Response myResponse = await SexyAPI(url: 'https://api64.ipify.org',parameters: parameters).call();
+String myResponse = await SexyAPI(url: 'https://api64.ipify.org',parameters: parameters).call();
 //Print the server response
-print(myResponse.body);
+print(myResponse);
 ~~~
 

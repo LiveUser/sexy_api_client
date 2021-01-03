@@ -15,7 +15,7 @@ class SexyAPI {
     this.path = this.path ?? '';
     this.parameters = this.parameters ?? {};
   }
-  Future<Response> call()async{
+  Future<String> call()async{
     //Format parameters into encoded uri QueryString
     List<String> keyValuePairs = [];
     this.parameters.keys.forEach((key) {
@@ -24,6 +24,7 @@ class SexyAPI {
     });
     String queryString = keyValuePairs.join('&');
     String fullURL = '$url$path?$queryString';
-    return await get(fullURL);
+    Response response = await get(fullURL);
+    return response.body;
   }
 }
